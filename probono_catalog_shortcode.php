@@ -2,22 +2,31 @@
 
 /*
 Plugin Name: Florida Probono Catalog Shortcode
-Plugin URI: https://storefront.wiedza.works
+Plugin URI: https://probono.savvysuit.com
 Description: A plugin that provides a shortcode that can insert the catalog in any page or post.
-Version: 0.2 BETA
+Version: 0.3 BETA
 Author: Wiedza Creations LLC
-Author URI: http://wiedza.works
+Author URI: https://savvysuit.com
 */
 
 // Add Shortcode
-function probono_catalog_func() {
+function probono_catalog_func( $atts ) {
+
+	// Attributes
+	$atts = shortcode_atts(
+		array(
+			'partner_id' => '-1',
+		),
+		$atts,
+		'probono_catalog'
+	);
 
 	// Return custom embed code
 	return  '<script src="https://flpbsf-assets.azureedge.net/webcomponents-lite.min.js"></script>' . 
 					"\n" .
 					'<link rel="import" href="https://flpbsf-assets.azureedge.net/probono-catalog.html">' . 
 					"\n" .
-					'<probono-catalog></probono-catalog>';
+					'<probono-catalog partner-id="' . $atts['partner_id'] . '"></probono-catalog>';
 
 }
 
