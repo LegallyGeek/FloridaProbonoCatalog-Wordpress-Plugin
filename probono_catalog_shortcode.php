@@ -22,9 +22,9 @@ function probono_catalog_func( $atts ) {
 	);
 
 	// Return custom embed code
-	return  '<script src="https://flpbsf-assets.azureedge.net/webcomponents-lite.min.js"></script>' . 
+	return  '<script src="https://probono.savvysuit.com/cdn-origin/webcomponents-lite.min.js"></script>' . 
 					"\n" .
-					'<link rel="import" href="https://flpbsf-assets.azureedge.net/probono-catalog.html">' . 
+					'<link rel="import" href="https://probono.savvysuit.com/cdn-origin/probono-catalog.html">' . 
 					"\n" .
 					'<probono-catalog partner-id="' . $atts['partner_id'] . '"></probono-catalog>';
 
