@@ -15,19 +15,21 @@ function probono_catalog_func( $atts ) {
 	// Attributes
 	$atts = shortcode_atts(
 		array(
-			'partner_id' => '-1',
+      'partner_id' => '-1',
+      'cohort_id' => '0',
 		),
 		$atts,
 		'probono_catalog'
 	);
 
 	// Return custom embed code
-	return  '<script src="https://probono.savvysuit.com/cdn-origin/webcomponents-lite.min.js"></script>' . 
+	return  '<probono-catalog cohort-id="' . $atts['cohort_id'] . '" partner-id="' . $atts['partner_id'] . '"></probono-catalog>' . 
 					"\n" .
-					'<link rel="import" href="https://probono.savvysuit.com/cdn-origin/probono-catalog.html">' . 
+					'<script src="https://probono.savvysuit.com/cdn-origin/current/webcomponents-loader.js"></script>' . 
+          "\n" .
+          '<script type="module" src="https://probono.savvysuit.com/cdn-origin/current/probono-catalog.js"></script>' . 
 					"\n" .
-					'<probono-catalog partner-id="' . $atts['partner_id'] . '"></probono-catalog>';
-
+					'<script nomodule src="https://probono.savvysuit.com/cdn-origin/current/probono-catalog-nomodule.js"></script>';
 }
 
 add_shortcode( 'probono_catalog', 'probono_catalog_func' );
