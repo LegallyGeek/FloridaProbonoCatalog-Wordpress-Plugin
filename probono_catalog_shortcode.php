@@ -4,7 +4,7 @@
 Plugin Name: SavvySuit Pro Bono Catalog Shortcode
 Plugin URI: https://probono.savvysuit.com
 Description: A plugin that provides a shortcode that can insert the catalog in any page or post.
-Version: 0.4 BETA
+Version: 0.4.1 BETA
 Author: Wiedza Creations LLC
 Author URI: https://savvysuit.com
 */
