@@ -4,7 +4,7 @@ A Wordpress plugin that provides a shortcode ([probono_catalog]) that allows som
 
 ## Specific Partner Use
 
-[probono_catalog cohort_id="0" partner_id="9" dark_mode="false"]
+[probono_catalog cohort_id="0" partner_id="9" dark_mode="false" default_query="covid"]
 
 The numbers used for "cohort_id" and "partner_id" in the example above, will be provided by FPBM to relevant parties.
 
